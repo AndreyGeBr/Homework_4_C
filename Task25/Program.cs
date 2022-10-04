@@ -11,17 +11,17 @@ int a = int.Parse(Console.ReadLine()!);
 
 Console.Write("Введите число B: ");
 int b = int.Parse(Console.ReadLine()!);
-int result = 1;
+int pow = Power(a, b);
 
-Power();
-
-Console.Write($"Число {a} в степени {b} равно {result}");
+Console.Write($"Число {a} в степени {b} равно {pow}");
 
 
-void Power()
+int Power(int a, int b)
 {
+    int result = 1;
     for (int i = 1; i <= b; i++)
     {
-        result *= a;
+       result *= a;
     }
+    return result;
 }
