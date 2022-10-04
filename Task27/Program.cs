@@ -7,22 +7,19 @@ Console.Clear();
  
 Console.Write("Введите число: ");
 int number = Math.Abs(int.Parse(Console.ReadLine()!));
+int sum = SumNumbers (number);
+Console.WriteLine(sum);
 
-int result = 0;
-SumNumbers ();
-
-Console.WriteLine(result);
-
-
-
-void SumNumbers ()
-{
+int SumNumbers (int number)
+{   
+    int result = 0;
     while (number > 0)
     {
         int digit = number % 10;
         result = result + digit;
         number = number / 10;
     }
+    return result;
 }
 
 
